@@ -1,0 +1,32 @@
+# Archivos generados por Python
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+*.egg-info/
+
+# Entorno virtual
+venv/
+env/
+.venv/
+
+# Archivos de configuración local
+local_settings.py
+
+# Archivos de la base de datos
+db.sqlite3
+*.sqlite3
+
+# Archivos generados por Django
+staticfiles/
+media/
+
+# Archivos de logs
+*.log
+
+# Archivos específicos de tu editor o IDE
+.idea/
+.vscode/
+
+# Otros archivos que quieras ignorar
+.DS_Store
