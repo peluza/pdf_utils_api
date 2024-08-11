@@ -11,6 +11,14 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 
 from pathlib import Path
+from dotenv import load_dotenv
+import os
+
+# Carga las variables de entorno desde el archivo .env
+load_dotenv()
+
+ip_client_cors = os.getenv("IP_CLIENT_CORS")
+port_client_cors = os.getenv("PORT_CLIENT_CORS")
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -128,5 +136,5 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:3001" 
+    f"http://{ip_client_cors}:{port_client_cors}"
 ]
